@@ -78,7 +78,9 @@ export function MainComponent() {
             <div className="status ok">Se ha insertado correctamente</div>
           )}
           {status === 400 && (
-            <div className="status bad">La palabra ya existe</div>
+            <div className="status bad">
+              Error de validación: la palabra ya existe o no es una palabra
+            </div>
           )}
         </Modal.Body>
       </Modal>
