@@ -7,7 +7,7 @@ import { Route, Switch, HashRouter as Router } from 'react-router-dom'
 class InstructorApp extends Component {
     render() {
         return (            
-        <Router>
+        <Router basename="AhorcadoApp/">
             <>
             <div className="title">
                 <h1>Ahorcado</h1>
