@@ -10,7 +10,10 @@ export function MainComponent() {
   const [show, setShow] = useState(false);
   const [status, setStatus] = useState(0);
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false);
+    setStatus(0);
+  };
   const handleShow = () => setShow(true);
   const sendData = () => {
     InsertPalabra(inputRef.current.value)
