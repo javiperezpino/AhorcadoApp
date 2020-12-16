@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/AhorcadoApp/static/css/main.4dfd45d7.chunk.css",
-    "main.js": "/AhorcadoApp/static/js/main.f1bada84.chunk.js",
-    "main.js.map": "/AhorcadoApp/static/js/main.f1bada84.chunk.js.map",
+    "main.js": "/AhorcadoApp/static/js/main.43412758.chunk.js",
+    "main.js.map": "/AhorcadoApp/static/js/main.43412758.chunk.js.map",
     "runtime-main.js": "/AhorcadoApp/static/js/runtime-main.6e9e4ce5.js",
     "runtime-main.js.map": "/AhorcadoApp/static/js/runtime-main.6e9e4ce5.js.map",
     "static/js/2.b830b762.chunk.js": "/AhorcadoApp/static/js/2.b830b762.chunk.js",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.6e9e4ce5.js",
     "static/js/2.b830b762.chunk.js",
     "static/css/main.4dfd45d7.chunk.css",
-    "static/js/main.f1bada84.chunk.js"
+    "static/js/main.43412758.chunk.js"
   ]
 }
