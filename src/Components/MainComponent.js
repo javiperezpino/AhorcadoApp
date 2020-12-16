@@ -28,10 +28,10 @@ export function MainComponent() {
     <>
       <div>
         <div className="center">
-          <Button href="AhorcadoApp/partida" variant="primary" size="lg" block>
+          <Button href="/partida" variant="primary" size="lg" block>
             Nueva Partida
           </Button>
-          <Button href="AhorcadoApp/palabras" variant="primary" size="lg" block>
+          <Button href="/palabras" variant="primary" size="lg" block>
             Ver Lista de Palabras
           </Button>
           <Button variant="primary" size="lg" block onClick={handleShow}>
