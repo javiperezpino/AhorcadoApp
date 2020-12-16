@@ -9,19 +9,20 @@ import { imageAhorcado, isLetter } from "../Utils/Utils";
 import { Button } from "react-bootstrap";
 
 export function PartidaComponent() {
+  //Referencia del input de la letra
   const inputRef = useRef(null);
-
+  //Mensaje de error para validación
   const [error, seterror] = useState("");
-
+  //Estado de la partida
   const [partida, setPartida] = useState(null);
-
+  //Cambiamos la imagen del ahorcado cuando cambia el estado de la partida en base al numero de errores
   const img_url = useMemo(() => {
     if (partida) {
       return imageAhorcado(partida.numeroDeFallos);
     }
     return null;
   }, [partida]);
-
+  //Comprobamos si la partida ha finalizado, si ha finalizado en derrota además de devolver un true pedimos la palabra correcta al servidor
   const isFinished = useMemo(() => {
     if (partida) {
       if (!partida.palabraRellenada?.includes("-")) return true;
@@ -36,16 +37,19 @@ export function PartidaComponent() {
     return false;
   }, [partida]);
 
-  useEffect(() => {
-    createNewGame();
-  }, []);
-
+  //Llamamos al servidor pidiendo una nueva partida y la seteamos
   const createNewGame = () => {
     CreateGame().then((response) => {
       setPartida(response.data);
     });
   };
 
+  //Creamos una nueva partida cuando se monta el componente
+  useEffect(() => {
+    createNewGame();
+  }, []);
+
+  //Validamos que no se envie mas de una letra, que este repetido, vacio o que no sea una letra
   const handleValidate = () => {
     if (inputRef.current.value?.length === 0) {
       seterror("El valor no puede estar vacio");
@@ -64,7 +68,7 @@ export function PartidaComponent() {
     seterror("");
     return true;
   };
-
+  //Onclick del boton enviar, envia la letra escrita en el input, el id de la partida actual y recibe el estado actualizado de la partida
   const handleClick = () => {
     if (handleValidate()) {
       UpdateGame(partida.id, inputRef.current.value).then((response) => {
@@ -110,6 +114,7 @@ export function PartidaComponent() {
         )}
       </div>
       <div className="row">
+        {/* Si la partida existe muestra el numero de fallos, letras usadas y la imagen correspondiente del ahorcado */}
         {partida && (
           <div>
             <h3>Fallos Restantes: {partida?.numeroDeFallos}</h3>
@@ -123,12 +128,15 @@ export function PartidaComponent() {
           </div>
         )}
       </div>
-
+      {/* Si el numero de fallos es menor que 0 muestra el texto correspondiente */}
       {partida && partida?.numeroDeFallos <= 0 && (
         <div>
           <h3 className="resultado derrota">DERROTA</h3>
         </div>
       )}
+      {/* Si la palabra rellenada esta entera (ya no contiene guiones) muestra el texto correspondiente,
+      hace una comprobación adicional del numero de fallos para que no se muestre cuando la palabra esta entera 
+      por haber sido recibida por el servidor al perder*/}
       {partida &&
         !partida?.palabraRellenada.includes("-") &&
         partida.numeroDeFallos > 0 && (

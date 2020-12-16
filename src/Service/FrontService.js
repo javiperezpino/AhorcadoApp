@@ -6,6 +6,7 @@ const GAME = "partida/";
 const INSERT_PALABRA = "palabra/";
 const SEPARATOR = "/";
 
+//Llamadas a la API
 export function retrieveAllWords() {
   return axios.get(`${API_URL}`);
 }

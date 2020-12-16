@@ -3,12 +3,14 @@ import { Button } from "react-bootstrap";
 import { retrieveAllWords } from "../Service/FrontService";
 
 export function ListComponent() {
+  //Creamos un State de palabras
   const [palabras, setPalabras] = useState([]);
 
+  //Llamamos a la función refreshPalabras cuando se monta el componente
   useEffect(() => {
     refreshPalabras();
   }, []);
-
+  //Llamamos a la funcion del service que llama al backend y actualizamos el State palabras con la respuesta del backend
   const refreshPalabras = () => {
     retrieveAllWords().then((response) => {
       console.log(response);
@@ -27,6 +29,7 @@ export function ListComponent() {
               <th>Nombre</th>
             </tr>
           </thead>
+          {/* Mapeamos las palabras por su id */}
           <tbody>
             {palabras?.map((palabra) => (
               <tr key={palabra.id}>

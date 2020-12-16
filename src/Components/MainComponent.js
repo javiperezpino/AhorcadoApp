@@ -5,16 +5,20 @@ import "./Style.css";
 import { InsertPalabra } from "../Service/FrontService";
 
 export function MainComponent() {
+  //Referencia para el input
   const inputRef = useRef(null);
-
+  //State para el modal (false no se muestra, true se muestra)
   const [show, setShow] = useState(false);
+  //State para almacenar la respuesta del servidor
   const [status, setStatus] = useState(0);
-
+  //Cierra el modal y resetea el status
   const handleClose = () => {
     setShow(false);
     setStatus(0);
   };
+  //Abre el modal
   const handleShow = () => setShow(true);
+  //Mandamos la palabra del input y almacenamos la respuesta del servidor
   const sendData = () => {
     InsertPalabra(inputRef.current.value)
       .then((response) => {
@@ -77,6 +81,7 @@ export function MainComponent() {
               </button>
             </div>
           </div>
+          {/* Si el status recibido es 200 (OK) o 400 (BAD_REQUEST) mostramos el mensaje correspondiente */}
           {status === 200 && (
             <div className="status ok">Se ha insertado correctamente</div>
           )}

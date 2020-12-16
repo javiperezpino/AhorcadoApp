@@ -7,10 +7,12 @@ import Ahorcado5 from "../Assets/Ahorcado5.PNG";
 import Ahorcado6 from "../Assets/Ahorcado6.PNG";
 import Ahorcado7 from "../Assets/Ahorcado7.PNG";
 
+//Funcion para comprobar si es una letra
 export function isLetter(str) {
   return str.length === 1 && str.match(/[a-z]/i);
 }
 
+//Array de imagenes del ahorcado ordenadas por el numero de fallos
 export function imageAhorcado(id) {
   const ahorcadoImages = [
     Ahorcado1,

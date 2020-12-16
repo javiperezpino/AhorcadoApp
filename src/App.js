@@ -1,15 +1,11 @@
-import React, { Component } from 'react';
-import './App.css';
-import InstructorApp from './Components/InstructorApp';
+import React, { Component } from "react";
+import "./App.css";
+import InstructorApp from "./Components/InstructorApp";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="container">
-        <InstructorApp />
-      </div>
-    );
-  }
+export default function App() {
+  return (
+    <div className="container">
+      <InstructorApp />
+    </div>
+  );
 }
-
-export default App;
