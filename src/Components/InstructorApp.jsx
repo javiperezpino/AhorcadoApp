@@ -2,7 +2,7 @@ import {ListComponent} from './ListComponent';
 import {MainComponent} from './MainComponent';
 import {PartidaComponent} from './PartidaComponent';
 import React, { Component } from 'react';
-import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
+import { Route, Switch, HashRouter as Router } from 'react-router-dom'
 
 class InstructorApp extends Component {
     render() {
