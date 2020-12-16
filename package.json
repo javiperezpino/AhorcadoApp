@@ -2,7 +2,7 @@
   "name": "frontend-ahorcado",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/javiperezpino/AhorcadoApp.git",
+  "homepage": "https://javiperezpino.github.io/AhorcadoApp/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "yarn run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
