@@ -1,0 +1,79 @@
+thead,
+tbody {
+  display: block;
+}
+
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+tbody {
+  height: 75vh;
+  width: 100%;
+  overflow-y: auto;
+}
+.title {
+  width: 200px;
+  margin: 40px auto;
+}
+.center {
+  width: 250px;
+  margin: 40px auto;
+}
+.container {
+  box-sizing: border-box;
+}
+.row {
+  justify-content: space-around;
+  padding-bottom: 100px;
+}
+.input-letter {
+  width: 220px;
+}
+
+.buttonGroupPartida {
+  margin: 0 auto;
+}
+
+.btn-group-vertical {
+  width: 100%;
+}
+
+Button {
+  border-radius: 10px;
+}
+
+.resultado {
+  margin: 0px auto 40px auto;
+  width: 125px;
+}
+
+.resultado.victoria {
+  color: chartreuse;
+}
+
+.resultado.derrota {
+  color: red;
+}
+
+.error {
+  font-size: 100%;
+  color: red;
+  margin-top: 10px;
+}
+
+.status {
+  font-size: 100%;
+  margin-top: 10px;
+}
+
+.status.ok {
+  color: green;
+}
+
+.status.bad {
+  color: red;
+}
