@@ -37,7 +37,7 @@ export function MainComponent() {
             Nueva Partida
           </Button>
           <Button
-            href="/AhorcadoApp/#/palabras"
+            href="/AhorcadoApp/#/partida"
             variant="primary"
             size="lg"
             block

@@ -36,7 +36,7 @@ export function ListComponent() {
             ))}
           </tbody>
           <tr>
-            <Button href="/#" variant="primary" size="lg" block>
+            <Button href="/AhorcadoApp/#" variant="primary" size="lg" block>
               Volver
             </Button>{" "}
           </tr>
