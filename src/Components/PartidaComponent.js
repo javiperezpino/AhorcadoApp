@@ -139,7 +139,7 @@ export function PartidaComponent() {
 
       <div className="btn-group-vertical">
         <div className="buttonGroupPartida">
-          <Button href="/" variant="info" block>
+          <Button href="/AhorcadoApp" variant="info" block>
             Volver
           </Button>
           <Button variant="info" onClick={createNewGame} block>
