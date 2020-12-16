@@ -2,12 +2,12 @@ import {ListComponent} from './ListComponent';
 import {MainComponent} from './MainComponent';
 import {PartidaComponent} from './PartidaComponent';
 import React, { Component } from 'react';
-import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
+import { Route, Switch, BrowserRouter as HashRouter } from 'react-router-dom'
 
 class InstructorApp extends Component {
     render() {
         return (            
-        <Router basename='/AhorcadoApp/'>
+            <HashRouter>
             <>
             <div className="title">
                 <h1>Ahorcado</h1>
@@ -19,7 +19,7 @@ class InstructorApp extends Component {
                     <Route path="/partida" component={PartidaComponent} />
                 </Switch>
             </>
-        </Router>
+        </HashRouter>
         )
     }
 }
