@@ -29,7 +29,7 @@ export function MainComponent() {
       <div>
         <div className="center">
           <Button
-            href="/AhorcadoApp/#/palabras"
+            href="/AhorcadoApp/#/partida"
             variant="primary"
             size="lg"
             block
@@ -37,7 +37,7 @@ export function MainComponent() {
             Nueva Partida
           </Button>
           <Button
-            href="/AhorcadoApp/#/partida"
+            href="/AhorcadoApp/#/palabras"
             variant="primary"
             size="lg"
             block
