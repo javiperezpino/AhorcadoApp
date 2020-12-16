@@ -7,16 +7,16 @@ import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 class InstructorApp extends Component {
     render() {
         return (            
-        <Router basename="AhorcadoApp/">
+        <Router>
             <>
             <div className="title">
                 <h1>Ahorcado</h1>
             </div>
                 
                 <Switch>
-                    <Route path="/" exact component={MainComponent} />
-                    <Route path="/palabras" exact component={ListComponent} />
-                    <Route path="/partida" component={PartidaComponent} />
+                    <Route path="/AhorcadoApp/" exact component={MainComponent} />
+                    <Route path="/AhorcadoApp/palabras" exact component={ListComponent} />
+                    <Route path="/AhorcadoApp/partida" component={PartidaComponent} />
                 </Switch>
             </>
         </Router>
